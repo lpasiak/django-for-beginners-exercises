@@ -6,4 +6,6 @@ def home_page_view(request):
     return HttpResponse('<h1>Homepage</h1>')
 
 def about_page_view(request):
-    return render(request, 'pages/about.html')
+    context = {'name': 'Łukasz'}
+
+    return render(request, 'pages/about.html', context)
